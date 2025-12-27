@@ -43,17 +43,6 @@ typedef struct {
     bool is_quant;
 } rknn_app_context_t;
 
-// 二次检测配置结构
-typedef struct {
-    bool enable_second_check;       // 是否启用二次检测
-    int small_target_threshold;     // 小目标阈值（像素）
-    float first_conf_min;           // 触发二次检测的最低置信度
-    float first_conf_max;           // 触发二次检测的最高置信度
-    float second_conf_threshold;    // 二次检测通过阈值
-    int crop_mode;                  // 0=固定640×640, 1=自适应
-    float crop_expand_ratio;        // 裁剪区域扩展倍数
-} second_check_config_t;
-
 #include "postprocess.h"
 
 

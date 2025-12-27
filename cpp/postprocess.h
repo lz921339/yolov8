@@ -19,10 +19,6 @@ typedef struct {
     image_rect_t box;
     float prop;
     int cls_id;
-    // 新增字段：用于二次检测
-    int box_width;   // bbox宽度
-    int box_height;  // bbox高度
-    bool verified;   // 是否已二次验证（true=通过验证，false=疑似误检）
 } object_detect_result;
 
 typedef struct {
