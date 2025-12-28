@@ -1,0 +1,2 @@
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-ar qc libfileutils.a  CMakeFiles/fileutils.dir/file_utils.c.o
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-ranlib libfileutils.a

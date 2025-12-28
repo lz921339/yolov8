@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/file_utils.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

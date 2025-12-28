@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/common.h
+
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/font.h
+
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/image_drawing.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+image_drawing.h
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/image_drawing.h
+font.h
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/font.h
+
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/image_drawing.h
+common.h
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/common.h
+

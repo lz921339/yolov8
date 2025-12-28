@@ -1,0 +1,8 @@
+human
+car
+bus
+motorcycle/bike
+fire
+smoke
+light
+cloud

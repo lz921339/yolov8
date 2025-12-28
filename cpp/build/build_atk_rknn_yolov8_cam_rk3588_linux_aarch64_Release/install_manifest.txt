@@ -1,0 +1,9 @@
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/./rknn_yolov8_cam
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/lib/librknnrt.so
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/model/text.txt
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/model/1.jpg
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/model/2.jpg
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/model/3.jpg
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/model/yolov8_8cls.rknn
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/lib/librknnrt.so
+/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam/lib/librga.so
