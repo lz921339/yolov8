@@ -70,13 +70,14 @@ int main(int argc, char **argv)
     double preprocess_time = 0.0;
     double inference_time = 0.0;
     double postprocess_time = 0.0;
-    auto fps_start_time = std::chrono::high_resolution_clock::now();
+
     
     // 主循环：持续读取摄像头帧并进行目标检测
     while(true){
         // 记录单帧开始时间
         auto frame_start = std::chrono::high_resolution_clock::now();
-        
+        // ===== 预处理阶段 =====
+        auto preprocess_start = std::chrono::high_resolution_clock::now();
         // 从摄像头读取一帧图像
         cap >> src_frame;
         if (src_frame.empty()) {
@@ -110,8 +111,7 @@ int main(int argc, char **argv)
         memset(inputs, 0, sizeof(inputs));
         memset(outputs, 0, sizeof(outputs));
 
-        // ===== 预处理阶段 =====
-        auto preprocess_start = std::chrono::high_resolution_clock::now();
+        
         
         // 设置目标图像尺寸为模型输入尺寸
         dst_img.width = rknn_app_ctx.model_width;
@@ -213,53 +213,12 @@ int main(int argc, char **argv)
             draw_text(&src_image, text, x1, y1 - 20, COLOR_GREEN, 10);
         }
         
-        auto postprocess_end = std::chrono::high_resolution_clock::now();
-        double postprocess_ms = std::chrono::duration<double, std::milli>(postprocess_end - postprocess_start).count();
-        postprocess_time += postprocess_ms;
+
 
         // 将处理后的图像数据封装为OpenCV Mat对象
         // CV_8UC3表示8位无符号3通道（BGR）图像
         cv::Mat result_mat = cv::Mat(src_image.height, src_image.width, CV_8UC3, 
                                      src_image.virt_addr, src_image.width_stride);
-
-        // ===== 计算并显示 FPS =====
-        auto frame_end = std::chrono::high_resolution_clock::now();
-        double frame_ms = std::chrono::duration<double, std::milli>(frame_end - frame_start).count();
-        total_time += frame_ms;
-        frame_count++;
-        
-        // 每秒更新一次 FPS 统计
-        auto current_time = std::chrono::high_resolution_clock::now();
-        double elapsed = std::chrono::duration<double>(current_time - fps_start_time).count();
-        
-        if (elapsed >= 1.0) {
-            double avg_fps = frame_count / elapsed;
-            double avg_total = total_time / frame_count;
-            double avg_preprocess = preprocess_time / frame_count;
-            double avg_inference = inference_time / frame_count;
-            double avg_postprocess = postprocess_time / frame_count;
-            
-            printf("\n========== Performance Statistics ==========\n");
-            printf("FPS: %.2f\n", avg_fps);
-            printf("Average Total Time: %.2f ms\n", avg_total);
-            printf("  - Preprocess:  %.2f ms (%.1f%%)\n", avg_preprocess, avg_preprocess/avg_total*100);
-            printf("  - Inference:   %.2f ms (%.1f%%)\n", avg_inference, avg_inference/avg_total*100);
-            printf("  - Postprocess: %.2f ms (%.1f%%)\n", avg_postprocess, avg_postprocess/avg_total*100);
-            printf("===========================================\n\n");
-            
-            // 重置统计
-            frame_count = 0;
-            total_time = 0.0;
-            preprocess_time = 0.0;
-            inference_time = 0.0;
-            postprocess_time = 0.0;
-            fps_start_time = current_time;
-        }
-        
-        // 在图像上显示实时 FPS
-        char fps_text[64];
-        sprintf(fps_text, "FPS: %.1f", 1000.0 / frame_ms);
-        draw_text(&src_image, fps_text, 10, 30, COLOR_RED, 15);
 
         // 显示检测结果图像
         cv::imshow("out", result_mat);
@@ -270,6 +229,40 @@ int main(int argc, char **argv)
         if (key == 'q' || key == 27) {
             break;
         }
+
+        auto postprocess_end = std::chrono::high_resolution_clock::now();
+        double postprocess_ms = std::chrono::duration<double, std::milli>(postprocess_end - postprocess_start).count();
+        postprocess_time += postprocess_ms;
+
+                // ===== 计算并显示 FPS =====
+        auto frame_end = std::chrono::high_resolution_clock::now();
+        double frame_ms = std::chrono::duration<double, std::milli>(frame_end - frame_start).count();
+        total_time += frame_ms;
+        frame_count++;
+        
+        
+        if(frame_count%5==0)
+        {
+            double avg_fps = frame_count / (total_time/1000);
+            double avg_total = (total_time) / frame_count;
+            double avg_preprocess = (preprocess_time) / frame_count;
+            double avg_inference = (inference_time) / frame_count;
+            double avg_postprocess = (postprocess_time) / frame_count;
+
+            printf("\n========== Performance Statistics ==========\n");
+            printf("FPS: %.2f\n", avg_fps);
+            printf("Average Total Time: %.2f ms\n", avg_total);
+            printf("  - Preprocess:  %.2f ms (%.1f%%)\n", avg_preprocess, avg_preprocess/avg_total*100);
+            printf("  - Inference:   %.2f ms (%.1f%%)\n", avg_inference, avg_inference/avg_total*100);
+            printf("  - Postprocess: %.2f ms (%.1f%%)\n", avg_postprocess, avg_postprocess/avg_total*100);
+            printf("===========================================\n\n");
+            
+        }
+        
+
+            
+        
+
     }
     
     // ===== 清理资源 =====
