@@ -662,27 +662,72 @@ err:
     return ret;
 }
 
+/**
+ * @brief 图像格式转换和缩放的统一接口
+ * 该函数会自动选择最优的处理方式：优先使用RGA硬件加速，失败时降级到CPU处理
+ * 
+ * @param src_img 源图像缓冲区
+ * @param dst_img 目标图像缓冲区
+ * @param src_box 源图像的裁剪区域（NULL表示使用整个图像）
+ * @param dst_box 目标图像的放置区域（NULL表示填充整个目标图像）
+ * @param color 填充颜色值（用于填充目标图像中未被源图像覆盖的区域）
+ * @return int 0表示成功，-1表示失败
+ */
 int convert_image(image_buffer_t* src_img, image_buffer_t* dst_img, image_rect_t* src_box, image_rect_t* dst_box, char color)
 {
     int ret;
  
+    // ===== 打印调试信息 =====
+    // 输出源图像的详细信息
     printf("src width=%d height=%d fmt=0x%x virAddr=0x%p fd=%d\n",
-        src_img->width, src_img->height, src_img->format, src_img->virt_addr, src_img->fd);
+        src_img->width,        // 源图像宽度
+        src_img->height,       // 源图像高度
+        src_img->format,       // 源图像格式（如RGB888、NV12等）
+        src_img->virt_addr,    // 源图像虚拟地址指针
+        src_img->fd);          // 源图像文件描述符（用于DMA缓冲区）
+    
+    // 输出目标图像的详细信息
     printf("dst width=%d height=%d fmt=0x%x virAddr=0x%p fd=%d\n",
-        dst_img->width, dst_img->height, dst_img->format, dst_img->virt_addr, dst_img->fd);
+        dst_img->width,        // 目标图像宽度
+        dst_img->height,       // 目标图像高度
+        dst_img->format,       // 目标图像格式
+        dst_img->virt_addr,    // 目标图像虚拟地址指针
+        dst_img->fd);          // 目标图像文件描述符
+    
+    // 如果指定了源裁剪区域，输出裁剪框坐标
     if (src_box != NULL) {
-        printf("src_box=(%d %d %d %d)\n", src_box->left, src_box->top, src_box->right, src_box->bottom);
+        printf("src_box=(%d %d %d %d)\n", 
+            src_box->left,     // 裁剪区域左边界
+            src_box->top,      // 裁剪区域上边界
+            src_box->right,    // 裁剪区域右边界
+            src_box->bottom);  // 裁剪区域下边界
     }
+    
+    // 如果指定了目标放置区域，输出目标框坐标
     if (dst_box != NULL) {
-        printf("dst_box=(%d %d %d %d)\n", dst_box->left, dst_box->top, dst_box->right, dst_box->bottom);
+        printf("dst_box=(%d %d %d %d)\n", 
+            dst_box->left,     // 目标区域左边界
+            dst_box->top,      // 目标区域上边界
+            dst_box->right,    // 目标区域右边界
+            dst_box->bottom);  // 目标区域下边界
     }
+    
+    // 输出填充颜色值
     printf("color=0x%x\n", color);
 
+    // ===== 尝试使用RGA硬件加速 =====
+    // RGA (Raster Graphic Acceleration) 是Rockchip的2D图形加速器
+    // 可以高效处理图像缩放、旋转、格式转换等操作
     ret = convert_image_rga(src_img, dst_img, src_box, dst_box, color);
+    
+    // ===== 降级到CPU处理 =====
+    // 如果RGA处理失败（可能原因：硬件不支持、格式不兼容、驱动问题等）
+    // 则使用CPU进行软件处理（速度较慢但兼容性好）
     if (ret != 0) {
         printf("try convert image use cpu\n");
         ret = convert_image_cpu(src_img, dst_img, src_box, dst_box, color);
     }
+    
     return ret;
 }
 
