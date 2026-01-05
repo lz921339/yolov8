@@ -11,6 +11,7 @@
 #include "file_utils.h"
 #include "image_drawing.h"
 #include <opencv2/opencv.hpp>
+#include <chrono>  // 添加时间测量库
 
 /*-------------------------------------------
                   Main Function
@@ -63,8 +64,19 @@ int main(int argc, char **argv)
     // 设置窗口为全屏模式
     cv::setWindowProperty("out", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
     
+    // ===== FPS 统计变量 =====
+    int frame_count = 0;
+    double total_time = 0.0;
+    double preprocess_time = 0.0;
+    double inference_time = 0.0;
+    double postprocess_time = 0.0;
+    auto fps_start_time = std::chrono::high_resolution_clock::now();
+    
     // 主循环：持续读取摄像头帧并进行目标检测
     while(true){
+        // 记录单帧开始时间
+        auto frame_start = std::chrono::high_resolution_clock::now();
+        
         // 从摄像头读取一帧图像
         cap >> src_frame;
         if (src_frame.empty()) {
@@ -83,7 +95,6 @@ int main(int argc, char **argv)
         src_image.format = IMAGE_FORMAT_RGB888;
         src_image.size = src_frame.total() * src_frame.elemSize();
 
-        int ret;
         image_buffer_t dst_img;       // 目标图像缓冲区（用于模型输入）
         letterbox_t letter_box;       // letterbox变换参数
         rknn_input inputs[rknn_app_ctx.io_num.n_input];    // 模型输入
@@ -100,6 +111,8 @@ int main(int argc, char **argv)
         memset(outputs, 0, sizeof(outputs));
 
         // ===== 预处理阶段 =====
+        auto preprocess_start = std::chrono::high_resolution_clock::now();
+        
         // 设置目标图像尺寸为模型输入尺寸
         dst_img.width = rknn_app_ctx.model_width;
         dst_img.height = rknn_app_ctx.model_height;
@@ -140,8 +153,13 @@ int main(int argc, char **argv)
         // 释放临时图像缓冲区
         free(dst_img.virt_addr);
         
+        auto preprocess_end = std::chrono::high_resolution_clock::now();
+        double preprocess_ms = std::chrono::duration<double, std::milli>(preprocess_end - preprocess_start).count();
+        preprocess_time += preprocess_ms;
+        
         // ===== 模型推理 =====
-        printf("rknn_run\n");
+        auto inference_start = std::chrono::high_resolution_clock::now();
+        
         ret = rknn_run(rknn_app_ctx.rknn_ctx, nullptr);
         if (ret < 0)
         {
@@ -158,8 +176,14 @@ int main(int argc, char **argv)
             outputs[i].want_float = (!rknn_app_ctx.is_quant);
         }
         ret = rknn_outputs_get(rknn_app_ctx.rknn_ctx, rknn_app_ctx.io_num.n_output, outputs, NULL);
+        
+        auto inference_end = std::chrono::high_resolution_clock::now();
+        double inference_ms = std::chrono::duration<double, std::milli>(inference_end - inference_start).count();
+        inference_time += inference_ms;
 
         // ===== 后处理阶段 =====
+        auto postprocess_start = std::chrono::high_resolution_clock::now();
+        
         // 对模型输出进行解析，应用NMS，生成最终检测结果
         post_process(&rknn_app_ctx, outputs, &letter_box, box_conf_threshold, nms_threshold, &od_results);
 
@@ -172,13 +196,6 @@ int main(int argc, char **argv)
         for (int i = 0; i < od_results.count; i++)
         {
             object_detect_result *det_result = &(od_results.results[i]);
-            
-            // 打印检测结果：类别名称、边界框坐标、置信度
-            printf("%s @ (%d %d %d %d) %.3f\n",
-                coco_cls_to_name(det_result->cls_id),
-                det_result->box.left, det_result->box.top,
-                det_result->box.right, det_result->box.bottom,
-                det_result->prop);
             
             // 获取边界框的四个坐标点
             int x1 = det_result->box.left;    // 左上角x坐标
@@ -195,11 +212,54 @@ int main(int argc, char **argv)
             // 在边界框上方绘制绿色文本标签，字体大小为10
             draw_text(&src_image, text, x1, y1 - 20, COLOR_GREEN, 10);
         }
+        
+        auto postprocess_end = std::chrono::high_resolution_clock::now();
+        double postprocess_ms = std::chrono::duration<double, std::milli>(postprocess_end - postprocess_start).count();
+        postprocess_time += postprocess_ms;
 
         // 将处理后的图像数据封装为OpenCV Mat对象
         // CV_8UC3表示8位无符号3通道（BGR）图像
         cv::Mat result_mat = cv::Mat(src_image.height, src_image.width, CV_8UC3, 
                                      src_image.virt_addr, src_image.width_stride);
+
+        // ===== 计算并显示 FPS =====
+        auto frame_end = std::chrono::high_resolution_clock::now();
+        double frame_ms = std::chrono::duration<double, std::milli>(frame_end - frame_start).count();
+        total_time += frame_ms;
+        frame_count++;
+        
+        // 每秒更新一次 FPS 统计
+        auto current_time = std::chrono::high_resolution_clock::now();
+        double elapsed = std::chrono::duration<double>(current_time - fps_start_time).count();
+        
+        if (elapsed >= 1.0) {
+            double avg_fps = frame_count / elapsed;
+            double avg_total = total_time / frame_count;
+            double avg_preprocess = preprocess_time / frame_count;
+            double avg_inference = inference_time / frame_count;
+            double avg_postprocess = postprocess_time / frame_count;
+            
+            printf("\n========== Performance Statistics ==========\n");
+            printf("FPS: %.2f\n", avg_fps);
+            printf("Average Total Time: %.2f ms\n", avg_total);
+            printf("  - Preprocess:  %.2f ms (%.1f%%)\n", avg_preprocess, avg_preprocess/avg_total*100);
+            printf("  - Inference:   %.2f ms (%.1f%%)\n", avg_inference, avg_inference/avg_total*100);
+            printf("  - Postprocess: %.2f ms (%.1f%%)\n", avg_postprocess, avg_postprocess/avg_total*100);
+            printf("===========================================\n\n");
+            
+            // 重置统计
+            frame_count = 0;
+            total_time = 0.0;
+            preprocess_time = 0.0;
+            inference_time = 0.0;
+            postprocess_time = 0.0;
+            fps_start_time = current_time;
+        }
+        
+        // 在图像上显示实时 FPS
+        char fps_text[64];
+        sprintf(fps_text, "FPS: %.1f", 1000.0 / frame_ms);
+        draw_text(&src_image, fps_text, 10, 30, COLOR_RED, 15);
 
         // 显示检测结果图像
         cv::imshow("out", result_mat);
