@@ -59,6 +59,18 @@ atomic
 -
 chrono
 -
+sys/mman.h
+-
+fcntl.h
+-
+sys/ioctl.h
+-
+unistd.h
+-
+linux/dma-buf.h
+-
+linux/dma-heap.h
+-
 yolov8.h
 /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/yolov8.h
 image_utils.h
