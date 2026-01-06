@@ -51,6 +51,14 @@ stdlib.h
 -
 string.h
 -
+thread
+-
+mutex
+-
+atomic
+-
+chrono
+-
 yolov8.h
 /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/yolov8.h
 image_utils.h
@@ -60,8 +68,6 @@ file_utils.h
 image_drawing.h
 /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/image_drawing.h
 opencv2/opencv.hpp
--
-chrono
 -
 
 /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/postprocess.cc

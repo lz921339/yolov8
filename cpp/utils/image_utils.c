@@ -491,102 +491,121 @@ static int convert_image_rga(image_buffer_t* src_img, image_buffer_t* dst_img, i
 {
     int ret = 0;
 
-    int srcWidth = src_img->width;
-    int srcHeight = src_img->height;
-    void *src = src_img->virt_addr;
-    int src_fd = src_img->fd;
-    void *src_phy = NULL;
-    int srcFmt = get_rga_fmt(src_img->format);
+    // ===== 提取源图像信息 =====
+    int srcWidth = src_img->width;           // 源图像宽度（像素）
+    int srcHeight = src_img->height;         // 源图像高度（像素）
+    void *src = src_img->virt_addr;          // 源图像虚拟地址指针
+    int src_fd = src_img->fd;                // 源图像文件描述符（用于DMA缓冲区，0表示普通内存）
+    void *src_phy = NULL;                    // 源图像物理地址（通常为NULL，由驱动管理）
+    int srcFmt = get_rga_fmt(src_img->format); // 将通用格式转换为RGA特定格式枚举
 
-    int dstWidth = dst_img->width;
-    int dstHeight = dst_img->height;
-    void *dst = dst_img->virt_addr;
-    int dst_fd = dst_img->fd;
-    void *dst_phy = NULL;
-    int dstFmt = get_rga_fmt(dst_img->format);
+    // ===== 提取目标图像信息 =====
+    int dstWidth = dst_img->width;           // 目标图像宽度
+    int dstHeight = dst_img->height;         // 目标图像高度
+    void *dst = dst_img->virt_addr;          // 目标图像虚拟地址指针
+    int dst_fd = dst_img->fd;                // 目标图像文件描述符
+    void *dst_phy = NULL;                    // 目标图像物理地址
+    int dstFmt = get_rga_fmt(dst_img->format); // 转换为RGA格式枚举
 
-    int rotate = 0;
+    int rotate = 0;  // 旋转角度标志（0=不旋转，IM_HAL_TRANSFORM_ROT_90等）
 
+    // ===== 检查是否使用RGA handle模式 =====
+    // handle模式是新版RGA API，提供更好的内存管理和性能
+    // 需要librga支持LIBRGA_IM2D_HANDLE宏定义
     int use_handle = 0;
 #if defined(LIBRGA_IM2D_HANDLE)
     use_handle = 1;
 #endif
 
-    // printf("src width=%d height=%d fmt=0x%x virAddr=0x%p fd=%d\n",
-    //     srcWidth, srcHeight, srcFmt, src, src_fd);
-    // printf("dst width=%d height=%d fmt=0x%x virAddr=0x%p fd=%d\n",
-    //     dstWidth, dstHeight, dstFmt, dst, dst_fd);
-    // printf("rotate=%d\n", rotate);
+    // RGA操作状态码和使用标志
+    int usage = 0;  // RGA操作标志位（旋转、缩放模式等）
+    IM_STATUS ret_rga = IM_STATUS_NOERROR;  // RGA操作返回状态
 
-    int usage = 0;
-    IM_STATUS ret_rga = IM_STATUS_NOERROR;
+    // ===== 设置RGA使用标志 =====
+    usage |= rotate;  // 添加旋转标志到usage（当前rotate=0，即不旋转）
 
-    // set rga usage
-    usage |= rotate;
-
-    // set rga rect
-    im_rect srect;
-    im_rect drect;
-    im_rect prect;
+    // ===== 设置RGA处理的矩形区域 =====
+    im_rect srect;   // 源图像裁剪矩形（从源图像的哪个区域读取）
+    im_rect drect;   // 目标图像放置矩形（写入到目标图像的哪个区域）
+    im_rect prect;   // 图案矩形（用于特殊填充模式，当前未使用）
     memset(&prect, 0, sizeof(im_rect));
 
+    // 设置源图像裁剪区域
     if (src_box != NULL) {
+        // 使用指定的裁剪区域（left,top是起点，right,bottom是终点）
         srect.x = src_box->left;
         srect.y = src_box->top;
-        srect.width = src_box->right - src_box->left + 1;
+        srect.width = src_box->right - src_box->left + 1;   // +1是因为包含边界点
         srect.height = src_box->bottom - src_box->top + 1;
     } else {
+        // 使用整个源图像
         srect.x = 0;
         srect.y = 0;
         srect.width = srcWidth;
         srect.height = srcHeight;
     }
 
+    // 设置目标图像放置区域
     if (dst_box != NULL) {
+        // 使用指定的放置区域（源图像经过缩放后放置到这个区域）
         drect.x = dst_box->left;
         drect.y = dst_box->top;
         drect.width = dst_box->right - dst_box->left + 1;
         drect.height = dst_box->bottom - dst_box->top + 1;
     } else {
+        // 填充整个目标图像
         drect.x = 0;
         drect.y = 0;
         drect.width = dstWidth;
         drect.height = dstHeight;
     }
 
-    // set rga buffer
-    rga_buffer_t rga_buf_src;
-    rga_buffer_t rga_buf_dst;
-    rga_buffer_t pat;
-    rga_buffer_handle_t rga_handle_src = 0;
-    rga_buffer_handle_t rga_handle_dst = 0;
+    // ===== 设置RGA缓冲区结构 =====
+    rga_buffer_t rga_buf_src;               // 源图像RGA缓冲区封装
+    rga_buffer_t rga_buf_dst;               // 目标图像RGA缓冲区封装
+    rga_buffer_t pat;                       // 图案缓冲区（未使用）
+    rga_buffer_handle_t rga_handle_src = 0; // 源图像句柄（handle模式）
+    rga_buffer_handle_t rga_handle_dst = 0; // 目标图像句柄（handle模式）
     memset(&pat, 0, sizeof(rga_buffer_t));
 
+    // 源图像参数（用于handle模式的导入）
     im_handle_param_t in_param;
     in_param.width = srcWidth;
     in_param.height = srcHeight;
     in_param.format = srcFmt;
 
+    // 目标图像参数（用于handle模式的导入）
     im_handle_param_t dst_param;
     dst_param.width = dstWidth;
     dst_param.height = dstHeight;
     dst_param.format = dstFmt;
 
+    // ===== 导入源图像缓冲区到RGA =====
     if (use_handle) {
+        // 使用handle模式导入（新版API，推荐）
         if (src_phy != NULL) {
+            // 从物理地址导入（少见，通常由驱动分配）
             rga_handle_src = importbuffer_physicaladdr((uint64_t)src_phy, &in_param);
         } else if (src_fd > 0) {
+            // 从文件描述符导入（DMA缓冲区，性能最佳）
+            // 这是最推荐的方式，RGA可以直接访问物理连续内存
             rga_handle_src = importbuffer_fd(src_fd, &in_param);
         } else {
+            // 从虚拟地址导入（普通malloc内存）
+            // RGA驱动会处理虚拟地址到物理地址的转换，可能有性能损失
             rga_handle_src = importbuffer_virtualaddr(src, &in_param);
         }
+        // 检查句柄是否有效
         if (rga_handle_src <= 0) {
             printf("src handle error %d\n", rga_handle_src);
             ret = -1;
             goto err;
         }
+        // 将句柄封装为RGA缓冲区对象
+        // 参数: handle, 宽, 高, 格式, 虚拟宽度(用于对齐), 虚拟高度
         rga_buf_src = wrapbuffer_handle(rga_handle_src, srcWidth, srcHeight, srcFmt, srcWidth, srcHeight);
     } else {
+        // 使用旧版API直接封装缓冲区（不推荐，兼容性用）
         if (src_phy != NULL) {
             rga_buf_src = wrapbuffer_physicaladdr(src_phy, srcWidth, srcHeight, srcFmt, srcWidth, srcHeight);
         } else if (src_fd > 0) {
@@ -596,7 +615,9 @@ static int convert_image_rga(image_buffer_t* src_img, image_buffer_t* dst_img, i
         }
     }
 
+    // ===== 导入目标图像缓冲区到RGA =====
     if (use_handle) {
+        // 使用handle模式导入
         if (dst_phy != NULL) {
             rga_handle_dst = importbuffer_physicaladdr((uint64_t)dst_phy, &dst_param);
         } else if (dst_fd > 0) {
@@ -604,13 +625,16 @@ static int convert_image_rga(image_buffer_t* src_img, image_buffer_t* dst_img, i
         } else {
             rga_handle_dst = importbuffer_virtualaddr(dst, &dst_param);
         }
+        // 检查句柄是否有效
         if (rga_handle_dst <= 0) {
             printf("dst handle error %d\n", rga_handle_dst);
             ret = -1;
             goto err;
         }
+        // 封装为RGA缓冲区对象
         rga_buf_dst = wrapbuffer_handle(rga_handle_dst, dstWidth, dstHeight, dstFmt, dstWidth, dstHeight);
     } else {
+        // 使用旧版API直接封装
         if (dst_phy != NULL) {
             rga_buf_dst = wrapbuffer_physicaladdr(dst_phy, dstWidth, dstHeight, dstFmt, dstWidth, dstHeight);
         } else if (dst_fd > 0) {
@@ -620,18 +644,28 @@ static int convert_image_rga(image_buffer_t* src_img, image_buffer_t* dst_img, i
         }
     }
 
+    // ===== 填充目标图像背景色（letterbox的关键步骤）=====
+    // 当目标放置区域小于整个目标图像时，需要填充背景色
+    // 例如: 480x640 -> 640x640，左右各填充80像素的黑边
     if (drect.width != dstWidth || drect.height != dstHeight) {
         im_rect dst_whole_rect = {0, 0, dstWidth, dstHeight};
+        
+        // 构造RGBA格式的颜色值（所有通道填充相同的color值）
         int imcolor;
-        char* p_imcolor = &imcolor;
-        p_imcolor[0] = color;
-        p_imcolor[1] = color;
-        p_imcolor[2] = color;
-        p_imcolor[3] = color;
+        char* p_imcolor = (char*)&imcolor;
+        p_imcolor[0] = color;  // R通道
+        p_imcolor[1] = color;  // G通道
+        p_imcolor[2] = color;  // B通道
+        p_imcolor[3] = color;  // A通道
+        
         printf("fill dst image (x y w h)=(%d %d %d %d) with color=0x%x\n",
             dst_whole_rect.x, dst_whole_rect.y, dst_whole_rect.width, dst_whole_rect.height, imcolor);
+        
+        // ⚠️ 使用RGA的imfill函数填充背景色
+        // 注意: 此函数在某些情况下可能失败（如内存未对齐、驱动问题等）
         ret_rga = imfill(rga_buf_dst, dst_whole_rect, imcolor);
         if (ret_rga <= 0) {
+            // RGA填充失败，降级到CPU填充（使用memset）
             if (dst != NULL) {
                 size_t dst_size = get_image_size(dst_img);
                 memset(dst, color, dst_size);
@@ -641,24 +675,33 @@ static int convert_image_rga(image_buffer_t* src_img, image_buffer_t* dst_img, i
         }
     }
 
-    // rga process
+    // ===== 执行RGA图像处理（核心操作）=====
+    // improcess是RGA的核心函数，可以同时完成:
+    // 1. 从源图像裁剪 (srect)
+    // 2. 缩放到目标尺寸 (drect)
+    // 3. 格式转换 (srcFmt -> dstFmt)
+    // 4. 旋转/镜像 (usage标志)
+    // 参数: 源缓冲区, 目标缓冲区, 图案缓冲区(NULL), 源矩形, 目标矩形, 图案矩形(NULL), 使用标志
     ret_rga = improcess(rga_buf_src, rga_buf_dst, pat, srect, drect, prect, usage);
     if (ret_rga <= 0) {
+        // RGA处理失败，打印错误信息
         printf("Error on improcess STATUS=%d\n", ret_rga);
         printf("RGA error message: %s\n", imStrError((IM_STATUS)ret_rga));
         ret = -1;
     }
 
 err:
+    // ===== 清理资源 =====
+    // 释放源图像句柄（handle模式需要显式释放）
     if (rga_handle_src > 0) {
         releasebuffer_handle(rga_handle_src);
     }
 
+    // 释放目标图像句柄
     if (rga_handle_dst > 0) {
         releasebuffer_handle(rga_handle_dst);
     }
 
-    // printf("finish\n");
     return ret;
 }
 

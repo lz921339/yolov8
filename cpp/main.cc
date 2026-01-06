@@ -9,6 +9,11 @@
 #include <mutex>
 #include <atomic>
 #include <chrono>  // 添加时间测量库
+#include <sys/mman.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+#include <linux/dma-buf.h>
+#include <linux/dma-heap.h>
 
 #include "yolov8.h"
 #include "image_utils.h"
@@ -81,7 +86,74 @@ int main(int argc, char **argv)
     dst_img.height = rknn_app_ctx.model_height;
     dst_img.format = IMAGE_FORMAT_RGB888;
     dst_img.size = get_image_size(&dst_img);
-    dst_img.virt_addr = (unsigned char*)malloc(dst_img.size);
+
+    // ===== 分配模型输入缓冲区 (使用DMA heap) =====
+    // DMA heap是Linux提供的DMA内存分配机制
+    // 可以分配物理连续的内存,供RGA等硬件加速器直接访问
+    
+    // 步骤1: 打开DMA heap设备文件
+    // "/dev/dma_heap/system" 是系统默认的DMA heap设备
+    int dma_heap_fd = open("/dev/dma_heap/system", O_RDWR);
+    if (dma_heap_fd < 0) {
+        // DMA heap打开失败 (可能是内核不支持或权限不足)
+        printf("Failed to open dma_heap, fallback to malloc\n");
+        // 降级方案: 使用普通malloc分配内存
+        dst_img.virt_addr = (unsigned char*)malloc(dst_img.size);
+        dst_img.fd = 0;  // fd=0 表示不是DMA缓冲区
+    } else {
+        // 步骤2: 准备DMA heap分配请求结构体
+        struct dma_heap_allocation_data heap_data;
+        memset(&heap_data, 0, sizeof(heap_data));
+        heap_data.len = dst_img.size;           // 要分配的字节数 (640*640*3=1228800)
+        heap_data.fd_flags = O_RDWR | O_CLOEXEC; // 文件描述符标志:
+                                                   // O_RDWR: 可读写
+                                                   // O_CLOEXEC: exec时自动关闭
+        
+        // 步骤3: 通过ioctl系统调用向DMA heap请求分配内存
+        // DMA_HEAP_IOCTL_ALLOC 是DMA heap的分配命令
+        if (ioctl(dma_heap_fd, DMA_HEAP_IOCTL_ALLOC, &heap_data) < 0) {
+            // DMA分配失败 (可能是内存不足)
+            printf("DMA heap alloc failed, fallback to malloc\n");
+            dst_img.virt_addr = (unsigned char*)malloc(dst_img.size);
+            dst_img.fd = 0;
+        } else {
+            // 步骤4: DMA分配成功,获取文件描述符
+            // heap_data.fd 是内核返回的DMA缓冲区文件描述符
+            // 这个fd代表一块物理连续的内存,可以传递给RGA等硬件
+            dst_img.fd = heap_data.fd;
+            
+            // 步骤5: 将DMA缓冲区映射到用户空间虚拟地址
+            // mmap系统调用建立虚拟地址到物理内存的映射关系
+            dst_img.virt_addr = (unsigned char*)mmap(
+                NULL,                    // 让内核自动选择虚拟地址
+                dst_img.size,            // 映射大小
+                PROT_READ | PROT_WRITE,  // 内存保护标志: 可读写
+                MAP_SHARED,              // 映射类型: 共享映射 (硬件可见修改)
+                dst_img.fd,              // DMA缓冲区的文件描述符
+                0                        // 从文件开头偏移0字节开始映射
+            );
+            
+            if (dst_img.virt_addr == MAP_FAILED) {
+                // mmap失败 (通常不会发生,除非系统资源耗尽)
+                printf("mmap failed, fallback to malloc\n");
+                close(dst_img.fd);  // 关闭DMA缓冲区fd
+                dst_img.virt_addr = (unsigned char*)malloc(dst_img.size);
+                dst_img.fd = 0;
+            } else {
+                // 成功! 打印DMA缓冲区信息
+                // 此时 dst_img.fd > 0, convert_image_rga会使用importbuffer_fd
+                // RGA硬件可以通过fd直接访问物理内存,实现硬件加速
+                printf("DMA buffer allocated: fd=%d size=%d\n", dst_img.fd, dst_img.size);
+            }
+        }
+        
+        // 步骤6: 关闭DMA heap设备文件描述符
+        // 注意: 这里关闭的是 /dev/dma_heap/system 的fd,
+        // 不是DMA缓冲区的fd (dst_img.fd仍然有效)
+        close(dma_heap_fd);
+    }
+    
+    // 最终检查: 确保缓冲区地址有效 (无论是DMA还是malloc)
     if (dst_img.virt_addr == NULL) {
         printf("malloc buffer size:%d fail!\n", dst_img.size);
         return -1;
@@ -291,9 +363,11 @@ int main(int argc, char **argv)
     }
 
     // 清理：循环外释放一次
-    if (dst_img.virt_addr) {
+    if (dst_img.fd > 0) {
+        munmap(dst_img.virt_addr, dst_img.size);
+        close(dst_img.fd);
+    } else if (dst_img.virt_addr) {
         free(dst_img.virt_addr);
-        dst_img.virt_addr = NULL;
     }
 
     // 退出时停止线程
