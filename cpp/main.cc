@@ -71,7 +71,19 @@ int main(int argc, char **argv)
     double inference_time = 0.0;
     double postprocess_time = 0.0;
 
-    
+    // 预分配目标图像缓冲区，避免每帧 malloc/free
+    image_buffer_t dst_img;
+    memset(&dst_img, 0, sizeof(image_buffer_t));
+    dst_img.width = rknn_app_ctx.model_width;
+    dst_img.height = rknn_app_ctx.model_height;
+    dst_img.format = IMAGE_FORMAT_RGB888;
+    dst_img.size = get_image_size(&dst_img);
+    dst_img.virt_addr = (unsigned char*)malloc(dst_img.size);
+    if (dst_img.virt_addr == NULL) {
+        printf("malloc buffer size:%d fail!\n", dst_img.size);
+        return -1;
+    }
+
     // 主循环：持续读取摄像头帧并进行目标检测
     while(true){
         // 记录单帧开始时间
@@ -96,7 +108,6 @@ int main(int argc, char **argv)
         src_image.format = IMAGE_FORMAT_RGB888;
         src_image.size = src_frame.total() * src_frame.elemSize();
 
-        image_buffer_t dst_img;       // 目标图像缓冲区（用于模型输入）
         letterbox_t letter_box;       // letterbox变换参数
         rknn_input inputs[rknn_app_ctx.io_num.n_input];    // 模型输入
         rknn_output outputs[rknn_app_ctx.io_num.n_output]; // 模型输出
@@ -107,26 +118,7 @@ int main(int argc, char **argv)
         // 初始化各结构体为0
         memset(&od_results, 0x00, sizeof(od_results));
         memset(&letter_box, 0, sizeof(letterbox_t));
-        memset(&dst_img, 0, sizeof(image_buffer_t));
-        memset(inputs, 0, sizeof(inputs));
-        memset(outputs, 0, sizeof(outputs));
-
         
-        
-        // 设置目标图像尺寸为模型输入尺寸
-        dst_img.width = rknn_app_ctx.model_width;
-        dst_img.height = rknn_app_ctx.model_height;
-        dst_img.format = IMAGE_FORMAT_RGB888;
-        dst_img.size = get_image_size(&dst_img);
-        
-        // 为目标图像分配内存
-        dst_img.virt_addr = (unsigned char *)malloc(dst_img.size);
-        if (dst_img.virt_addr == NULL)
-        {
-            printf("malloc buffer size:%d fail!\n", dst_img.size);
-            return -1;
-        }
-
         // 使用letterbox方式进行图像缩放（保持宽高比，填充边缘）
         ret = convert_image_with_letterbox(&src_image, &dst_img, &letter_box, bg_color);
         if (ret < 0)
@@ -149,9 +141,6 @@ int main(int argc, char **argv)
             printf("rknn_input_set fail! ret=%d\n", ret);
             return -1;
         }
-        
-        // 释放临时图像缓冲区
-        free(dst_img.virt_addr);
         
         auto preprocess_end = std::chrono::high_resolution_clock::now();
         double preprocess_ms = std::chrono::duration<double, std::milli>(preprocess_end - preprocess_start).count();
@@ -280,6 +269,12 @@ int main(int argc, char **argv)
     if (src_image.virt_addr != NULL)
     {
         free(src_image.virt_addr);
+    }
+
+    // 清理：循环外释放一次
+    if (dst_img.virt_addr) {
+        free(dst_img.virt_addr);
+        dst_img.virt_addr = NULL;
     }
 
     return 0;
