@@ -5,13 +5,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <thread>
+#include <mutex>
+#include <atomic>
+#include <chrono>  // 添加时间测量库
 
 #include "yolov8.h"
 #include "image_utils.h"
 #include "file_utils.h"
 #include "image_drawing.h"
 #include <opencv2/opencv.hpp>
-#include <chrono>  // 添加时间测量库
 
 /*-------------------------------------------
                   Main Function
@@ -84,18 +87,34 @@ int main(int argc, char **argv)
         return -1;
     }
 
+    cv::Mat shared_frame;
+    std::mutex frame_mutex;
+    std::atomic<bool> stop_capture(false);
+
+    // 捕获线程：持续读取摄像头，把最新一帧存到 shared_frame
+    std::thread cap_thread([&](){
+        cv::Mat frame;
+        while(!stop_capture.load()) {
+            if (!cap.read(frame)) continue; // 失败就重试
+            std::lock_guard<std::mutex> lk(frame_mutex);
+            frame.copyTo(shared_frame); // 只保存最新一帧
+            // 不要 sleep，尽量实时
+        }
+    });
+
     // 主循环：持续读取摄像头帧并进行目标检测
     while(true){
+        {
+            std::lock_guard<std::mutex> lk(frame_mutex);
+            if (shared_frame.empty()) { std::this_thread::sleep_for(std::chrono::milliseconds(1)); continue; }
+            shared_frame.copyTo(src_frame);
+        }
+        // 现在 src_frame 是最新帧，继续预处理/推理/后处理
+
         // 记录单帧开始时间
         auto frame_start = std::chrono::high_resolution_clock::now();
         // ===== 预处理阶段 =====
         auto preprocess_start = std::chrono::high_resolution_clock::now();
-        // 从摄像头读取一帧图像
-        cap >> src_frame;
-        if (src_frame.empty()) {
-            std::cerr << "Failed to grab frame from the camera." << std::endl;
-            break;
-        }
 
         // 将图像逆时针旋转90度
         cv::rotate(src_frame, src_frame, cv::ROTATE_90_COUNTERCLOCKWISE);
@@ -276,6 +295,10 @@ int main(int argc, char **argv)
         free(dst_img.virt_addr);
         dst_img.virt_addr = NULL;
     }
+
+    // 退出时停止线程
+    stop_capture.store(true);
+    if (cap_thread.joinable()) cap_thread.join();
 
     return 0;
 }
