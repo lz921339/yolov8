@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/main.cc" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/main.cc.o"
-  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/postprocess.cc" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o"
-  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/rknpu2/yolov8.cc" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o"
+  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/main.cc" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/main.cc.o"
+  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/postprocess.cc" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o"
+  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/rknpu2/yolov8.cc" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,9 +23,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/imageutils.dir/DependInfo.cmake"
-  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/fileutils.dir/DependInfo.cmake"
-  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/imagedrawing.dir/DependInfo.cmake"
+  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/imageutils.dir/DependInfo.cmake"
+  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/fileutils.dir/DependInfo.cmake"
+  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/imagedrawing.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

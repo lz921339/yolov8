@@ -11,7 +11,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/3.16.3/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/3.16.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ 
@@ -24,29 +24,29 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
+Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_677b5/fast && /usr/bin/make -f CMakeFiles/cmTC_677b5.dir/build.make CMakeFiles/cmTC_677b5.dir/build
-make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_677b5.dir/testCCompiler.c.o
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc    -o CMakeFiles/cmTC_677b5.dir/testCCompiler.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/testCCompiler.c"
-Linking C executable cmTC_677b5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_677b5.dir/link.txt --verbose=1
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc      CMakeFiles/cmTC_677b5.dir/testCCompiler.c.o  -o cmTC_677b5 
-make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Run Build Command(s):/usr/bin/make cmTC_5584f/fast && /usr/bin/make -f CMakeFiles/cmTC_5584f.dir/build.make CMakeFiles/cmTC_5584f.dir/build
+make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5584f.dir/testCCompiler.c.o
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc    -o CMakeFiles/cmTC_5584f.dir/testCCompiler.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/testCCompiler.c"
+Linking C executable cmTC_5584f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5584f.dir/link.txt --verbose=1
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc      CMakeFiles/cmTC_5584f.dir/testCCompiler.c.o  -o cmTC_5584f 
+make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
+Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a609c/fast && /usr/bin/make -f CMakeFiles/cmTC_a609c.dir/build.make CMakeFiles/cmTC_a609c.dir/build
-make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc   -v -o CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/make cmTC_f86f3/fast && /usr/bin/make -f CMakeFiles/cmTC_f86f3.dir/build.make CMakeFiles/cmTC_f86f3.dir/build
+make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc   -v -o CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc.br_real
 Target: aarch64-buildroot-linux-gnu
@@ -54,8 +54,8 @@ Configured with: ./configure --prefix=/home/alientek/ATK-DLRK3588/buildroot/outp
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) 
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
- /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1 -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -fPIE -o /tmp/ccpffqwx.s
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1 -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -fPIE -o /tmp/ccW6xWbS.s
 GNU C17 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) version 10.4.0 (aarch64-buildroot-linux-gnu)
 	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -74,15 +74,15 @@ GNU C17 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) version 10.4.0 (
 	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 07e0264b400c20c0079c378023743eaf
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
- /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o /tmp/ccpffqwx.s
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+ /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o /tmp/ccW6xWbS.s
 GNU assembler version 2.40 (aarch64-buildroot-linux-gnu) using BFD version (GNU Binutils) 2.40
 COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/
 LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
-Linking C executable cmTC_a609c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a609c.dir/link.txt --verbose=1
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc     -v CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o  -o cmTC_a609c 
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+Linking C executable cmTC_f86f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f86f3.dir/link.txt --verbose=1
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc     -v CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o  -o cmTC_f86f3 
 Using built-in specs.
 COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc.br_real
 COLLECT_LTO_WRAPPER=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper
@@ -93,10 +93,10 @@ Supported LTO compression algorithms: zlib
 gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) 
 COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/
 LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_a609c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
- /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyPMLuY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_a609c /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_a609c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
-make[1]: Leaving directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_f86f3' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPmS79n.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_f86f3 /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_f86f3' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+make[1]: Leaving directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
 
 
 
@@ -117,12 +117,12 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-buildroot-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_a609c/fast && /usr/bin/make -f CMakeFiles/cmTC_a609c.dir/build.make CMakeFiles/cmTC_a609c.dir/build]
-  ignore line: [make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc   -v -o CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_f86f3/fast && /usr/bin/make -f CMakeFiles/cmTC_f86f3.dir/build.make CMakeFiles/cmTC_f86f3.dir/build]
+  ignore line: [make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc   -v -o CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc.br_real]
   ignore line: [Target: aarch64-buildroot-linux-gnu]
@@ -130,8 +130,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1 -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -fPIE -o /tmp/ccpffqwx.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1 -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -fPIE -o /tmp/ccW6xWbS.s]
   ignore line: [GNU C17 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) version 10.4.0 (aarch64-buildroot-linux-gnu)]
   ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -150,15 +150,15 @@ Parsed C implicit link information from above output:
   ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 07e0264b400c20c0079c378023743eaf]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o /tmp/ccpffqwx.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o /tmp/ccW6xWbS.s]
   ignore line: [GNU assembler version 2.40 (aarch64-buildroot-linux-gnu) using BFD version (GNU Binutils) 2.40]
   ignore line: [COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [Linking C executable cmTC_a609c]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a609c.dir/link.txt --verbose=1]
-  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc     -v CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o  -o cmTC_a609c ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking C executable cmTC_f86f3]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f86f3.dir/link.txt --verbose=1]
+  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc     -v CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o  -o cmTC_f86f3 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc.br_real]
   ignore line: [COLLECT_LTO_WRAPPER=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper]
@@ -169,13 +169,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) ]
   ignore line: [COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_a609c' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyPMLuY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_a609c /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_f86f3' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPmS79n.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_f86f3 /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o]
     arg [/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccyPMLuY.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccPmS79n.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -190,7 +190,7 @@ Parsed C implicit link information from above output:
     arg [-maarch64linux] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a609c] ==> ignore
+    arg [cmTC_f86f3] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o] ==> ignore
@@ -206,7 +206,7 @@ Parsed C implicit link information from above output:
     arg [-zcommon-page-size=4096] ==> ignore
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
-    arg [CMakeFiles/cmTC_a609c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_f86f3.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -234,26 +234,26 @@ Parsed C implicit link information from above output:
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
+Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b29d5/fast && /usr/bin/make -f CMakeFiles/cmTC_b29d5.dir/build.make CMakeFiles/cmTC_b29d5.dir/build
-make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_b29d5.dir/testCXXCompiler.cxx.o
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++     -o CMakeFiles/cmTC_b29d5.dir/testCXXCompiler.cxx.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
-Linking CXX executable cmTC_b29d5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b29d5.dir/link.txt --verbose=1
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++       CMakeFiles/cmTC_b29d5.dir/testCXXCompiler.cxx.o  -o cmTC_b29d5 
-make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Run Build Command(s):/usr/bin/make cmTC_43893/fast && /usr/bin/make -f CMakeFiles/cmTC_43893.dir/build.make CMakeFiles/cmTC_43893.dir/build
+make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_43893.dir/testCXXCompiler.cxx.o
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++     -o CMakeFiles/cmTC_43893.dir/testCXXCompiler.cxx.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
+Linking CXX executable cmTC_43893
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43893.dir/link.txt --verbose=1
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++       CMakeFiles/cmTC_43893.dir/testCXXCompiler.cxx.o  -o cmTC_43893 
+make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
+Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_7cab0/fast && /usr/bin/make -f CMakeFiles/cmTC_7cab0.dir/build.make CMakeFiles/cmTC_7cab0.dir/build
-make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++    -v -o CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/make cmTC_5248d/fast && /usr/bin/make -f CMakeFiles/cmTC_5248d.dir/build.make CMakeFiles/cmTC_5248d.dir/build
+make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++    -v -o CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++.br_real
 Target: aarch64-buildroot-linux-gnu
@@ -261,8 +261,8 @@ Configured with: ./configure --prefix=/home/alientek/ATK-DLRK3588/buildroot/outp
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) 
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
- /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1plus -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -fPIE -o /tmp/ccsY7KBz.s
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1plus -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -fPIE -o /tmp/cccMBOAY.s
 GNU C++14 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) version 10.4.0 (aarch64-buildroot-linux-gnu)
 	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -287,15 +287,15 @@ GNU C++14 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) version 10.4.0
 	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: b826d6c8ea492134e32b214a1dcbf419
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
- /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccsY7KBz.s
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+ /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o /tmp/cccMBOAY.s
 GNU assembler version 2.40 (aarch64-buildroot-linux-gnu) using BFD version (GNU Binutils) 2.40
 COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/
 LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
-Linking CXX executable cmTC_7cab0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cab0.dir/link.txt --verbose=1
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++      -v CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7cab0 
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+Linking CXX executable cmTC_5248d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5248d.dir/link.txt --verbose=1
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++      -v CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5248d 
 Using built-in specs.
 COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++.br_real
 COLLECT_LTO_WRAPPER=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper
@@ -306,10 +306,10 @@ Supported LTO compression algorithms: zlib
 gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) 
 COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/
 LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_7cab0' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
- /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccevlVD2.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_7cab0 /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_7cab0' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
-make[1]: Leaving directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_5248d' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKAl0ln.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_5248d /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_5248d' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64'
+make[1]: Leaving directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp'
 
 
 
@@ -336,12 +336,12 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-buildroot-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_7cab0/fast && /usr/bin/make -f CMakeFiles/cmTC_7cab0.dir/build.make CMakeFiles/cmTC_7cab0.dir/build]
-  ignore line: [make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++    -v -o CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_5248d/fast && /usr/bin/make -f CMakeFiles/cmTC_5248d.dir/build.make CMakeFiles/cmTC_5248d.dir/build]
+  ignore line: [make[1]: Entering directory '/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++    -v -o CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++.br_real]
   ignore line: [Target: aarch64-buildroot-linux-gnu]
@@ -349,8 +349,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1plus -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -fPIE -o /tmp/ccsY7KBz.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/cc1plus -quiet -v -iprefix /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/ -isysroot /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-a76.cortex-a55 -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -fPIE -o /tmp/cccMBOAY.s]
   ignore line: [GNU C++14 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) version 10.4.0 (aarch64-buildroot-linux-gnu)]
   ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -375,15 +375,15 @@ Parsed CXX implicit link information from above output:
   ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: b826d6c8ea492134e32b214a1dcbf419]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccsY7KBz.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/as -v -EL -march=armv8.2-a+fp16+rcpc+dotprod -mabi=lp64 -o CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o /tmp/cccMBOAY.s]
   ignore line: [GNU assembler version 2.40 (aarch64-buildroot-linux-gnu) using BFD version (GNU Binutils) 2.40]
   ignore line: [COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [Linking CXX executable cmTC_7cab0]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cab0.dir/link.txt --verbose=1]
-  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++      -v CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7cab0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking CXX executable cmTC_5248d]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5248d.dir/link.txt --verbose=1]
+  ignore line: [/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++      -v CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5248d ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++.br_real]
   ignore line: [COLLECT_LTO_WRAPPER=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper]
@@ -394,13 +394,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 10.4.0 (Buildroot linux-5.10-gen-rkr5.1-164-g935bc360ac-dirty) ]
   ignore line: [COMPILER_PATH=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/:/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_7cab0' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccevlVD2.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_7cab0 /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector-strong' '-fPIE' '-pie' '-v' '-o' 'cmTC_5248d' '-shared-libgcc' '-mcpu=cortex-a76.cortex-a55' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2 -plugin /opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so -plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKAl0ln.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_5248d /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/../../../../aarch64-buildroot-linux-gnu/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib -L/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtendS.o /opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crtn.o]
     arg [/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/opt/atk-dlrk3588-toolchain/bin/../libexec/gcc/aarch64-buildroot-linux-gnu/10.4.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccevlVD2.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccKAl0ln.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -415,7 +415,7 @@ Parsed CXX implicit link information from above output:
     arg [-maarch64linux] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_7cab0] ==> ignore
+    arg [cmTC_5248d] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/Scrt1.o] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/lib/../lib64/crti.o] ==> ignore
     arg [/opt/atk-dlrk3588-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.4.0/crtbeginS.o] ==> ignore
@@ -431,7 +431,7 @@ Parsed CXX implicit link information from above output:
     arg [-zcommon-page-size=4096] ==> ignore
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
-    arg [CMakeFiles/cmTC_7cab0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_5248d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -455,30 +455,30 @@ Parsed CXX implicit link information from above output:
 
 
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
+Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_485d0/fast && /usr/bin/make -f CMakeFiles/cmTC_485d0.dir/build.make CMakeFiles/cmTC_485d0.dir/build
-make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_485d0.dir/CheckIncludeFile.c.o
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot    -o CMakeFiles/cmTC_485d0.dir/CheckIncludeFile.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/CheckIncludeFile.c"
-Linking C executable cmTC_485d0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_485d0.dir/link.txt --verbose=1
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot      CMakeFiles/cmTC_485d0.dir/CheckIncludeFile.c.o  -o cmTC_485d0 
-make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Run Build Command(s):/usr/bin/make cmTC_ee9db/fast && /usr/bin/make -f CMakeFiles/cmTC_ee9db.dir/build.make CMakeFiles/cmTC_ee9db.dir/build
+make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ee9db.dir/CheckIncludeFile.c.o
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot    -o CMakeFiles/cmTC_ee9db.dir/CheckIncludeFile.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/CheckIncludeFile.c"
+Linking C executable cmTC_ee9db
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee9db.dir/link.txt --verbose=1
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot      CMakeFiles/cmTC_ee9db.dir/CheckIncludeFile.c.o  -o cmTC_ee9db 
+make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
 
 
 
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
-Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
+Change Dir: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a9167/fast && /usr/bin/make -f CMakeFiles/cmTC_a9167.dir/build.make CMakeFiles/cmTC_a9167.dir/build
-make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_a9167.dir/src.c.o
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a9167.dir/src.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/src.c"
-Linking C executable cmTC_a9167
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9167.dir/link.txt --verbose=1
-/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_a9167.dir/src.c.o  -o cmTC_a9167 
-make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Run Build Command(s):/usr/bin/make cmTC_5c396/fast && /usr/bin/make -f CMakeFiles/cmTC_5c396.dir/build.make CMakeFiles/cmTC_5c396.dir/build
+make[1]: 进入目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5c396.dir/src.c.o
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5c396.dir/src.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_5c396
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c396.dir/link.txt --verbose=1
+/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_5c396.dir/src.c.o  -o cmTC_5c396 
+make[1]: 离开目录“/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/CMakeTmp”
 
 
 Source file was:

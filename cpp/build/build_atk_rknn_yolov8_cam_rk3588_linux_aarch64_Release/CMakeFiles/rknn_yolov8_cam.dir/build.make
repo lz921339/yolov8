@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp"
+CMAKE_SOURCE_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release"
+CMAKE_BINARY_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rknn_yolov8_cam.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/rknn_yolov8_cam.dir/flags.make
 
 CMakeFiles/rknn_yolov8_cam.dir/main.cc.o: CMakeFiles/rknn_yolov8_cam.dir/flags.make
 CMakeFiles/rknn_yolov8_cam.dir/main.cc.o: ../../main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rknn_yolov8_cam.dir/main.cc.o"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rknn_yolov8_cam.dir/main.cc.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/main.cc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rknn_yolov8_cam.dir/main.cc.o"
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rknn_yolov8_cam.dir/main.cc.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/main.cc"
 
 CMakeFiles/rknn_yolov8_cam.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rknn_yolov8_cam.dir/main.cc.i"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/main.cc" > CMakeFiles/rknn_yolov8_cam.dir/main.cc.i
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/main.cc" > CMakeFiles/rknn_yolov8_cam.dir/main.cc.i
 
 CMakeFiles/rknn_yolov8_cam.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rknn_yolov8_cam.dir/main.cc.s"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/main.cc" -o CMakeFiles/rknn_yolov8_cam.dir/main.cc.s
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/main.cc" -o CMakeFiles/rknn_yolov8_cam.dir/main.cc.s
 
 CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o: CMakeFiles/rknn_yolov8_cam.dir/flags.make
 CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o: ../../postprocess.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/postprocess.cc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o"
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/postprocess.cc"
 
 CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.i"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/postprocess.cc" > CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.i
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/postprocess.cc" > CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.i
 
 CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.s"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/postprocess.cc" -o CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.s
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/postprocess.cc" -o CMakeFiles/rknn_yolov8_cam.dir/postprocess.cc.s
 
 CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o: CMakeFiles/rknn_yolov8_cam.dir/flags.make
 CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o: ../../rknpu2/yolov8.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/rknpu2/yolov8.cc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o"
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.o -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/rknpu2/yolov8.cc"
 
 CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.i"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/rknpu2/yolov8.cc" > CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.i
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/rknpu2/yolov8.cc" > CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.i
 
 CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.s"
-	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/rknpu2/yolov8.cc" -o CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.s
+	/opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-g++ --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/rknpu2/yolov8.cc" -o CMakeFiles/rknn_yolov8_cam.dir/rknpu2/yolov8.cc.s
 
 # Object files for target rknn_yolov8_cam
 rknn_yolov8_cam_OBJECTS = \
@@ -116,7 +116,7 @@ rknn_yolov8_cam: ../../3rdparty/rknpu2/Linux/aarch64/librknnrt.so
 rknn_yolov8_cam: ../../3rdparty/jpeg_turbo/Linux/aarch64/libturbojpeg.a
 rknn_yolov8_cam: ../../3rdparty/librga/Linux/aarch64/librga.a
 rknn_yolov8_cam: CMakeFiles/rknn_yolov8_cam.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable rknn_yolov8_cam"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable rknn_yolov8_cam"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rknn_yolov8_cam.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -129,6 +129,6 @@ CMakeFiles/rknn_yolov8_cam.dir/clean:
 .PHONY : CMakeFiles/rknn_yolov8_cam.dir/clean
 
 CMakeFiles/rknn_yolov8_cam.dir/depend:
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/rknn_yolov8_cam.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/rknn_yolov8_cam.dir/depend
 

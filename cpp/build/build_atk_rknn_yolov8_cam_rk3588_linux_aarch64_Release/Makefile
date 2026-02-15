@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp"
+CMAKE_SOURCE_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release"
+CMAKE_BINARY_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

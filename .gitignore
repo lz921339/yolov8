@@ -1,0 +1,8 @@
+build/
+install/
+*.o
+*.a
+*.so
+*.out
+.vscode/
+.cmake/

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp"
+CMAKE_SOURCE_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release"
+CMAKE_BINARY_DIR = "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release"
 
 # Include any dependencies generated for this target.
 include utils.out/CMakeFiles/imageutils.dir/depend.make
@@ -59,16 +59,16 @@ include utils.out/CMakeFiles/imageutils.dir/flags.make
 
 utils.out/CMakeFiles/imageutils.dir/image_utils.c.o: utils.out/CMakeFiles/imageutils.dir/flags.make
 utils.out/CMakeFiles/imageutils.dir/image_utils.c.o: ../../utils/image_utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object utils.out/CMakeFiles/imageutils.dir/image_utils.c.o"
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && /opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/imageutils.dir/image_utils.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/image_utils.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object utils.out/CMakeFiles/imageutils.dir/image_utils.c.o"
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && /opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/imageutils.dir/image_utils.c.o   -c "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils/image_utils.c"
 
 utils.out/CMakeFiles/imageutils.dir/image_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/imageutils.dir/image_utils.c.i"
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && /opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/image_utils.c" > CMakeFiles/imageutils.dir/image_utils.c.i
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && /opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils/image_utils.c" > CMakeFiles/imageutils.dir/image_utils.c.i
 
 utils.out/CMakeFiles/imageutils.dir/image_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/imageutils.dir/image_utils.c.s"
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && /opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/image_utils.c" -o CMakeFiles/imageutils.dir/image_utils.c.s
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && /opt/atk-dlrk3588-toolchain/bin/aarch64-buildroot-linux-gnu-gcc --sysroot=/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils/image_utils.c" -o CMakeFiles/imageutils.dir/image_utils.c.s
 
 # Object files for target imageutils
 imageutils_OBJECTS = \
@@ -80,9 +80,9 @@ imageutils_EXTERNAL_OBJECTS =
 utils.out/libimageutils.a: utils.out/CMakeFiles/imageutils.dir/image_utils.c.o
 utils.out/libimageutils.a: utils.out/CMakeFiles/imageutils.dir/build.make
 utils.out/libimageutils.a: utils.out/CMakeFiles/imageutils.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libimageutils.a"
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && $(CMAKE_COMMAND) -P CMakeFiles/imageutils.dir/cmake_clean_target.cmake
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imageutils.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libimageutils.a"
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && $(CMAKE_COMMAND) -P CMakeFiles/imageutils.dir/cmake_clean_target.cmake
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imageutils.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 utils.out/CMakeFiles/imageutils.dir/build: utils.out/libimageutils.a
@@ -90,10 +90,10 @@ utils.out/CMakeFiles/imageutils.dir/build: utils.out/libimageutils.a
 .PHONY : utils.out/CMakeFiles/imageutils.dir/build
 
 utils.out/CMakeFiles/imageutils.dir/clean:
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && $(CMAKE_COMMAND) -P CMakeFiles/imageutils.dir/cmake_clean.cmake
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" && $(CMAKE_COMMAND) -P CMakeFiles/imageutils.dir/cmake_clean.cmake
 .PHONY : utils.out/CMakeFiles/imageutils.dir/clean
 
 utils.out/CMakeFiles/imageutils.dir/depend:
-	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/imageutils.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/imageutils.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : utils.out/CMakeFiles/imageutils.dir/depend
 

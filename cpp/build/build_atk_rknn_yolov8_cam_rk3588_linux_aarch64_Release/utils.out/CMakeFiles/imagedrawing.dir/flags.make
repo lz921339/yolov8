@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG   -g -O0 -ggdb -gdwarf -funwind-tables -rdynamic -Wno-wri
 
 C_DEFINES = -DLIBRGA_IM2D_HANDLE
 
-C_INCLUDES = -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils" 
+C_INCLUDES = -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils" 
 

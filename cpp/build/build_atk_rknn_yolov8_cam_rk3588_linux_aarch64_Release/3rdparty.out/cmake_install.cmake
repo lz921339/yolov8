@@ -1,8 +1,8 @@
-# Install script for directory: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty
+# Install script for directory: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam")
+  set(CMAKE_INSTALL_PREFIX "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,10 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE PROGRAM FILES "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/rknpu2/Linux/aarch64/librknnrt.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE PROGRAM FILES "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/rknpu2/Linux/aarch64/librknnrt.so")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE PROGRAM FILES "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/librga/Linux/aarch64/librga.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE PROGRAM FILES "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/librga/Linux/aarch64/librga.so")
 endif()
 

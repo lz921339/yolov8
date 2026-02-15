@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG   -g -O0 -ggdb -gdwarf -funwind-tables -rdynamic -Wno-w
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/opencv4 -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/rknpu2/include" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/stb_image" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/jpeg_turbo/include" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/librga/include" 
+CXX_INCLUDES = -I/opt/atk-dlrk3588-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/opencv4 -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/rknpu2/include" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/stb_image" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/jpeg_turbo/include" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/librga/include" 
 

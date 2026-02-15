@@ -1,8 +1,8 @@
-# Install script for directory: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils
+# Install script for directory: /media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam")
+  set(CMAKE_INSTALL_PREFIX "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/install/rk3588_linux_aarch64/atk_rknn_yolov8_cam")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG   -g -O0 -ggdb -gdwarf -funwind-tables -rdynamic -Wno-wri
 
 C_DEFINES = -DLIBRGA_IM2D_HANDLE
 
-C_INCLUDES = -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/stb_image" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/jpeg_turbo/include" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/3rdparty/librga/include" 
+C_INCLUDES = -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/stb_image" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/jpeg_turbo/include" -I"/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/3rdparty/librga/include" 
 

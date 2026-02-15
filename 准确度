@@ -1,0 +1,44 @@
+DONE (t=0.15s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.324
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.353
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.155
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.226
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.373
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.288
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.393
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.213
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.289
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.435
+mAP@0.50:0.95 -->  0.3238309140892928
+mAP@0.50      -->  0.5240055165817876
+mAP@0.75      -->  0.35280136189615485
+AR@0.50:0.95 (medium) -->  0.28889210159578727
+AR@0.50:0.95 (large)  -->  0.4350642450674038
+
+Timing summary (averaged across processed frames):
+  Preprocess: 1.20 ms
+  Inference: 247.43 ms
+  Postprocess: 13.37 ms
+  Total per frame: 262.00 ms
+  Effective FPS: 3.82
+
+
+- 在主循环里，代码先完成推理和后处理，随后若 `map_test` 为真，就为当前图像生成一个稳定的 `image_id`（利用文件名的 MD5，避免同名冲突），并把每个检测框通过 `co_helper.add_single_record()` 写入缓存，记录内容包括 `image_id`、类别、bbox 和打分 yolov82.py。`COCO_test_helper` 负责把网络输出的 `xyxy` 框恢复到原图坐标（考虑 letterbox 缩放）并转换成 COCO 需要的 `[x, y, w, h]`。
+- 推理全部完成后，`co_helper.export_to_json()` 会把缓存写成 `预测结果 JSON`（模型名+平台命名） yolov82.py。JSON 结构遵循 COCO detection result 规范：每条记录含 `image_id`、`category_id`、`bbox`、`score`。
+- 真实标注来自 `generate_gt_json_from_yolo()` yolov82.py：  
+  - `load_yolo_annotations()` 逐图解析 YOLO `txt` 文件 yolov82.py。  
+  - `yolo_to_coco_bbox()` 把归一化的 `(x_center,y_center,w,h)` 转换成像素级 `COCO bbox` yolov82.py。  
+  - 函数为每幅图片写入 `images`、`annotations`，并用 `CLASSES` 生成 `categories` 列表，输出 `*_gt_*.json`。
+- 拿到预测与标注 JSON 后，脚本调用 `coco_eval_with_json()` yolov82.py。这个辅助函数封装了 pycocotools 的标准评估：  
+  - 加载 GT 与预测，按 IoU 阈值集合 $\{0.50,0.55,\dots,0.95\}$ 逐一匹配。  
+  - 对每个 IoU 阈值和每个类别计算 Precision-Recall 曲线上的 $AP = \int_{0}^{1} p(r)\,dr$，再对所有阈值求平均：$mAP = \frac{1}{T}\sum_{t=1}^{T}AP_{\text{IoU}_t}$，其中 $T=10$。  
+  - 额外给出 `AP@0.50`、`AP@0.75`、`AR` 等 COCO 传统指标。终端输出格式与 YOLO_MAP_README.md 示例一致。
+
+**给客户的文字建议**
+
+1. 说明触发方式：在推理命令里追加 `--map_test`，并确保 `--img_folder`、`--labels_folder` 指向同名图/标注对。  
+2. 描述数据流：推理阶段记录所有预测 → 自动把 YOLO 标注转成 COCO JSON → 运行 COCO 官方评估。  
+3. 强调指标含义：默认报告 `mAP@[0.50:0.95]`（综合难度）以及 `mAP@0.50`（常用阈值），数值可直接对标业界公开基线。  
+4. 可引用 README 中的示例输出，帮助客户理解最终表格里各字段的意义。

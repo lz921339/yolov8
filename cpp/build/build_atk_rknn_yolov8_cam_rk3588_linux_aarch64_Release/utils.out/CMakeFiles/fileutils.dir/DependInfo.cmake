@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/utils/file_utils.c" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/fileutils.dir/file_utils.c.o"
+  "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/utils/file_utils.c" "/media/ubuntu20/ADATA SC610/workspace/yolo/yolov8 -3/cpp/build/build_atk_rknn_yolov8_cam_rk3588_linux_aarch64_Release/utils.out/CMakeFiles/fileutils.dir/file_utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
